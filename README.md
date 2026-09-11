@@ -1,6 +1,6 @@
 # SmallConvert
 
-A small, no-nonsense file converter. Drag files in, pick a target format, done.
+SmallConvert is small, no-nonsense file converter run locally for your convenience. Drag files in, pick a target format, and you're done.
 Runs on **Windows, macOS and Linux**.
 
 ## Supported conversions
@@ -13,8 +13,8 @@ Runs on **Windows, macOS and Linux**.
 | Word (DOC/DOCX) | – | – | ✓ * | – |
 | Markdown (MD) | – | – | ✓ * | ✓ * |
 
-\* Needs a document engine: **Microsoft Word** (Windows) or **LibreOffice** (any platform).
-SmallConvert uses whichever it finds; image conversions work without either.
+\* Note that these need a document engine: **Microsoft Word** (Windows) or **LibreOffice** (other).
+SmallConvert will use whichever it finds; image conversions will work without either.
 
 ## Download
 
@@ -36,10 +36,10 @@ Grab the build for your system from the [Releases](../../releases) page:
 
 ## Usage
 
-1. Choose the target format.
-2. Drag one or more files onto the drop area.
+1. First, choose your target format. (DOCX, PDF, PNG and JPG) 
+2. Drag one or more files onto the drop area. The results will appear on the same folder as the original.
 
-Converted files are saved next to the originals. Existing files are never overwritten – a `(1)` suffix is added instead. Transparent areas become white when converting to JPG.
+
 
 ## Building from source
 
@@ -53,7 +53,7 @@ publish.cmd         # Windows:     same
 
 ## Libraries used
 
-- [Avalonia UI](https://avaloniaui.net/) – cross-platform desktop UI
+- [Avalonia UI](https://avaloniaui.net/) – UI
 - [Magick.NET](https://github.com/dlemstra/Magick.NET) – image decoding/encoding
 - [Svg.Skia](https://github.com/wieslawsoltes/Svg.Skia) – SVG rendering
 - [Markdig](https://github.com/xoofx/markdig) – Markdown parsing
