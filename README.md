@@ -24,15 +24,17 @@ Grab the build for your system from the [Releases](../../releases) page:
 |---|---|---|
 | `SmallConvert-*-windows-x64.exe` | Windows 10/11 | Everything bundled, just run it |
 | `SmallConvert-*-windows-x64-dotnet.exe` | Windows 10/11 | Small download; needs the free [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0) (Windows offers to install it on first start) |
-| `SmallConvert-*-macos-arm64` | macOS, Apple Silicon | See macOS note below |
-| `SmallConvert-*-macos-x64` | macOS, Intel | See macOS note below |
-| `SmallConvert-*-linux-x64` | Linux | Run `chmod +x SmallConvert-*` first |
+| `SmallConvert-*-macos-arm64` | macOS, Apple Silicon | Zipped file, see macOS note below |
+| `SmallConvert-*-macos-x64` | macOS, Intel | Zipped file, macOS note below |
+| `SmallConvert-*-linux-x64` | Linux | Unzip, then run `chmod +x SmallConvert-*` |
 
 **Windows:** SmartScreen may warn about an unknown publisher. Click "More info" → "Run anyway".
 
-**macOS:** the download is a plain executable, not an `.app`. Open Terminal, run
-`chmod +x SmallConvert-*-macos-*` and then `xattr -d com.apple.quarantine SmallConvert-*-macos-*`
-(removes the "unidentified developer" block), then start it from Terminal or by double-click.
+**macOS:** the download is a plain executable, not an `.app`. Unzip it, open Terminal in that folder and run
+`chmod +x SmallConvert` and then `xattr -dr com.apple.quarantine .`
+(removes the "unidentified developer" block for the executable and its libraries), then start it with `./SmallConvert` or by double-click.
+
+The macOS and Linux archives contain the `SmallConvert` executable(the app itself) plus a few native library files (`.dylib` / `.so`). You'll need to keep those together in the same file for the program to run.
 
 ## Usage
 
